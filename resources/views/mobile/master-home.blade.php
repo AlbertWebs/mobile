@@ -83,7 +83,7 @@
 
               $.ajax({
 
-                      url: ENDPOINT + "/mobile/get-started?page=" + page,
+                      url: ENDPOINT + "/get-started?page=" + page,
 
                       datatype: "html",
 
