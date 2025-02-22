@@ -1,6 +1,6 @@
 <footer class="bg-white body_rounded mt-n5 fixed-bottom osahan-footer-nav shadow">
-    <div class="text-center" style="visibility: hidden">
-        <img width="30" src="{{asset('/mobileTheme/img/loading.gif')}}" class="loading-img">
+    <div class="text-center">
+        <img width="25" src="{{asset('/mobileTheme/img/loading.gif')}}" class="loading-img">
      </div>
     <div class="row p-0 align-items-center">
        <div class="col text-center">
