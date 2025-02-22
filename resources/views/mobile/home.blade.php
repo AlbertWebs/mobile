@@ -1,6 +1,3 @@
-@if ($browser->isMobile())
-  @include('auth.login')
-@else
 
     @extends('mobile.master-home')
 
@@ -109,4 +106,3 @@
     @include('mobile.horizontal-nav')
     @include('mobile.main-nav')
     @endsection
-@endif
