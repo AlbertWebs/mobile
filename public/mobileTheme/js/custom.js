@@ -234,7 +234,7 @@ Version: 1.0
                 // Handle the successful response
                 $(".loading-img").hide();
                 alert(response);
-                $('#myCart').load(location.href + ' #myCart');
+                $("#myCart").load(location.href + " #myCart");
                 // window.location.replace(host2);
 
 
