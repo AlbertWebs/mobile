@@ -1,3 +1,9 @@
+
+
+
+
+@if ($browser->isMobile())
+
 @extends('mobile.master-profile')
 
 @section('content')
@@ -46,7 +52,7 @@
           @endforeach
 
 
-          <p><a href="{{url('/')}}/mobile/menu" class="text-primary"><i class="mdi mdi-plus mr-2"></i> Add more items</a></p>
+          <p><a href="{{url('/')}}/mobile/get-started" class="text-primary"><i class="mdi mdi-plus mr-2"></i> Add more items</a></p>
           <a href="select_address.html" class="d-flex align-items-center mb-3">
              <div class="m-0 h1"><i class="d-block mdi mdi-motorbike box_rounded bg-light text-warning px-3 py-1"></i></div>
              <div class="text-dark ml-3">
@@ -69,3 +75,11 @@
 
 @include('mobile.main-nav')
 @endsection
+
+
+@else
+   @include('shaqshouse.index')
+@endif
+
+
+

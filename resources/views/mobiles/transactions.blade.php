@@ -1,3 +1,8 @@
+
+
+
+@if ($browser->isMobile())
+
 @extends('mobile.master-profile')
 
 @section('content')
@@ -32,13 +37,9 @@
                 // dd($data);
             ?>
            <p class="mb-0"><strong>Payment For:</strong> </p>
-           @if($data == null)
-           <p class="text-danger">No data</p>
-           @else
-                @foreach ($data as $items)
-                <p class="mb-0">{{$items['name']}} - {{$items['quantity']}}</p>
-                @endforeach
-            @endif
+            @foreach ($data as $items)
+            <p class="mb-0">{{$items['name']}} - {{$items['quantity']}}</p>
+            @endforeach
             {{--
              --}}
 
@@ -59,3 +60,10 @@
  @include('mobile.horizontal-nav')
  @include('mobile.main-nav')
 @endsection
+
+@else
+   @include('shaqshouse.index')
+@endif
+
+
+

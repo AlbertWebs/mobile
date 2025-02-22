@@ -17,6 +17,9 @@
       <link rel="stylesheet" type="text/css" href="{{asset('mobileTheme/vendor/slick/slick-theme.min.css')}}" />
       <link href="{{asset('mobileTheme/css/style.css')}}" rel="stylesheet" type="text/css">
       <link href="{{asset('mobileTheme/vendor/sidebar/demo.css')}}" rel="stylesheet">
+
+         <!-- CSRF Token -->
+       <meta name="csrf-token" content="{{ csrf_token() }}">
       {{--  --}}
    </head>
    <body>
