@@ -118,6 +118,6 @@ class MobileLoginController extends Controller
 
     public function logouts(Request $request) {
         Auth::logout();
-        return redirect('/mobile/sign-in');
+        return redirect('/home');
       }
 }

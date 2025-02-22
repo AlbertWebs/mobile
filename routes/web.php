@@ -13,7 +13,7 @@ Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
-Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->name('home-index');
+Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->name('home');
 Route::group(['prefix'=>'mobile'], function(){
     Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile-get-started');
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
