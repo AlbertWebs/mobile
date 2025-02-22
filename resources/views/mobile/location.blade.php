@@ -20,7 +20,7 @@
  </section> --}}
  <section class="bg-light body_rounded position-relative mt-n5 p-3">
 
-    <strong>Name:</strong>Albert Muhatia<br>
+    <strong>Name:</strong>{{Auth::User()->name}}<br>
     <strong>Email:</strong>albertmuhatia@gmail.com<br>
     <strong>Mobile:</strong>+254723014032<br><br>
     <h6 class="mb-3 fw-bold">Select Location</h6>
