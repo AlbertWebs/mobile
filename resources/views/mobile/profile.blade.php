@@ -45,7 +45,7 @@
              <p class="h5 ml-auto text-muted mb-0"><i class="mdi mdi-chevron-right"></i></p>
           </a>
 
-          <a href="tel:+254723014032" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
+          <a href="tel:+254706788440" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
             <p class="h5 text-warning mb-0"><i class="mdi mdi-progress-question  bg-white text-dark"></i></p>
             <p class="ml-3 mb-0">Help</p>
             <p class="h5 ml-auto text-muted mb-0"><i class="mdi mdi-chevron-right"></i></p>
@@ -53,12 +53,12 @@
        </div>
        <div class="pt-4">
           <p class="text-muted mb-2">Offers</p>
-          <a href="{{url('/')}}/mobile/offers" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
+          <a href="#" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
              <p class="h5 text-primary mb-0"><i class="mdi mdi-ticket-percent"></i></p>
              <p class="ml-3 mb-0">Offers &amp; Promos</p>
              <p class="h5 ml-auto text-muted mb-0"><i class="mdi mdi-chevron-right"></i></p>
           </a>
-          <a href="{{url('/')}}/mobile/menu" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
+          <a href="{{url('/')}}/mobile/" class="shadow-sm text-dark d-flex align-items-center mb-1 p-2 bg-white rounded">
              <p class="h5 text-danger mb-0"><i class="mdi mdi-home"></i></p>
              <p class="ml-3 mb-0">Menu</p>
              <p class="h5 ml-auto text-muted mb-0"><i class="mdi mdi-chevron-right"></i></p>
