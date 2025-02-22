@@ -20,6 +20,7 @@ use Jenssegers\Agent\Agent;
 use Carbon\Carbon;
 use Response;
 use Session;
+use Darryldecode\Cart\Cart;
 use Illuminate\Support\Facades\Log;
 
 class MobileController extends Controller
@@ -236,9 +237,10 @@ class MobileController extends Controller
 
     public function removeCart($id)
     {
+
         \Cart::remove($id);
-        session()->flash('success', 'Item Cart Remove Successfully !');
-        return redirect()->route('cart.list.mobile');
+
+        return back();
     }
 
 

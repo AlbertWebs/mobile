@@ -225,6 +225,7 @@ Version: 1.0
           $(".loading-img").show();
           var productID = $(this).attr('id');
           var host = window.location.protocol + "//" + window.location.host + "/mobile/shopping-cart/add-to-cart/" + productID;
+        //   alert(productID);
           var host2 = window.location.protocol + "//" + window.location.host + "/mobile/shopping-cart/";
           $.ajax({
               url: host,

@@ -41,7 +41,7 @@
                <p class="mb-0">{{$Product->title}}</p>
                <p class="mb-0 small">KES {{$shoppingCart->price}}</p>
             </div>
-            <a href="{{url('/')}}/mobile/shopping-cart/remove/1{{$shoppingCart->id}}" class="ml-auto"><i class="bg-light text-danger p-2 mdi mdi-trash-can-outline box_rounded h6 mb-0"></i></a>
+            <a href="{{url('/')}}/mobile/shopping-cart/remove/{{$shoppingCart['id']}}" class="ml-auto"><i class="bg-light text-danger p-2 mdi mdi-trash-can-outline box_rounded h6 mb-0"></i></a>
          </div>
           @endforeach
 
