@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('shaqshouse.index');
 });
 
-Route::get('/', function () {
+Route::get('/menu', function () {
     return view('shaqshouse.menu');
 });
 
