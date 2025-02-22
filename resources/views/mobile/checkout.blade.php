@@ -89,5 +89,6 @@
 
 
 
+ {{-- @include('mobile.horizontal-nav') --}}
 @include('mobile.main-nav')
 @endsection

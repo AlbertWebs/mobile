@@ -1,4 +1,7 @@
 <footer class="bg-white body_rounded mt-n5 fixed-bottom osahan-footer-nav shadow">
+    <div class="text-center" style="display: none">
+        <img width="30" src="{{asset('/mobileTheme/img/loading.gif')}}" class="loading-img">
+     </div>
     <div class="row p-0 align-items-center">
        <div class="col text-center">
           <a href="{{url('/')}}/mobile/get-started" class="text-muted">
