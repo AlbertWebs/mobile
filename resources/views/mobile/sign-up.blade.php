@@ -21,11 +21,11 @@
        <img src="{{asset('uploads/VENSHAQ001-41.png')}}" class="height-70" alt="logos" />
        </a>
        </span>
-       <img src="{{asset('mobileTheme/img/covertop.jpg')}}" class="img-fluid">
+       <img style="height:250px; width:100%; object-fit:cover" src="{{asset('mobileTheme/img/covertop.jpg')}}" class="img-fluid">
     </section>
     <section class="bg-white body_rounded mt-n5 position-relative p-4">
         <h5 class="mb-4">Create an account</h5>
-        <form class="" action="{{url('/')}}/mobile/sign-up" id="submitSignUp">
+        <form method="POST" action="{{url('/')}}/mobile/sign-up">
             @csrf
            <div class="d-flex align-items-center mb-3">
               <span class="mdi mdi-account-outline box_rounded p-2 btn btn-light mr-3 text-primary"></span>
@@ -33,6 +33,11 @@
                  <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="name" placeholder="Albert" autocomplete="off">
                  <label for="floatingInputValue" class="pl-0">Name</label>
               </div>
+              @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
            </div>
            <div class="d-flex align-items-center mb-3">
             <span class="mdi mdi-phone box_rounded p-2 btn btn-light mr-3 text-primary"></span>
@@ -48,10 +53,15 @@
                  <label for="floatingInputValue" class="pl-0">EMAIL</label>
               </div>
            </div>
+           @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
            <div class="d-flex align-items-center mb-3">
                 <span class="mdi mdi-map box_rounded p-2 btn btn-light mr-3 text-primary"></span>
                 <div class="form-floating border-bottom w-100">
-                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="address"  value="{{ $currentUserInfo->regionName }}, {{ $currentUserInfo->cityName }}" autocomplete="off">
+                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="location"  value="{{ $currentUserInfo->regionName }}, {{ $currentUserInfo->cityName }}" autocomplete="off">
                 <label for="floatingInputValue" class="pl-0">Your Delivery Address</label>
                 </div>
             </div>
@@ -62,6 +72,11 @@
                  <label for="floatingInputValue" class="pl-0">PASSWORD</label>
               </div>
            </div>
+           @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
            <div class="d-flex align-items-center mb-3">
                 <span class="mdi mdi-key-variant box_rounded p-2 btn btn-light mr-3 text-primary"></span>

@@ -53,8 +53,8 @@ class MobileLoginController extends Controller
         if(Auth::User()){
             return redirect()->route('get-started');
         }else{
-            $ip = $request->ip();
-            // $ip = '197.156.140.165';
+            // $ip = $request->ip();
+            $ip = '197.156.140.165';
             $currentUserInfo = Location::get($ip);
             return view('mobile.sign-up', compact('currentUserInfo'));
         }
@@ -77,7 +77,7 @@ class MobileLoginController extends Controller
          $name = $request->name;
          $email = $request->email;
          $mobile = $request->mobile;
-         $address = $request->address;
+         $address = $request->location;
          $password = $request->password;
          $password_confirm = $request->password_confirm;
 
@@ -101,13 +101,9 @@ class MobileLoginController extends Controller
 
                 $user = User::where('email','=',$email)->first();
                 Auth::loginUsingId($user->id, TRUE);
-                return response()->json([
-                    "message" => "Success"
-                ]);
+                return redirect('/mobile/get-started');
             }else{
-                return response()->json([
-                    "message" => "That email is already in use by another person"
-                ]);
+                return redirect('/mobile/get-started');
             }
         }else{
             return response()->json([

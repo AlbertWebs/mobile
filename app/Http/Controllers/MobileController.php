@@ -509,7 +509,7 @@ class MobileController extends Controller
 
         $curl_response = curl_exec($curl);
         $access_token=json_decode($curl_response);
-        dd($curl_response);
+
         Log::info($curl_response);
         return $access_token->access_token;
     }
