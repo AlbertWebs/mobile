@@ -232,10 +232,11 @@ Version: 1.0
               method: "GET",
               success: function(response) {
                 // Handle the successful response
+                $("#myCart").load(" #myCart > *");
                 $(".loading-img").hide();
                 alert(response);
                 // $("#myCart").load(location.href + " #myCart");
-                $("#myCart").load(" #myCart > *");
+
                 // window.location.replace(host2);
 
 
