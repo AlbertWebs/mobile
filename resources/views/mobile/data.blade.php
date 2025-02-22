@@ -1,5 +1,5 @@
 @foreach ($Menu as $menu)
-    <a class="col-6 pr-2 order-btn" href="#" id="{{$menu->id}}">
+    <a class="col-6 pr-2 order-btn" id="{{$menu->id}}">
         <div class="bg-white box_rounded overflow-hidden mb-3 shadow-sm">
             <img style="height: 150px; width:100%; object-fit:cover" src="{{url('/')}}/uploads/menu/{{$menu->image}}" class="img-fluid">
             <div class="p-2">
