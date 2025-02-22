@@ -1,6 +1,6 @@
 
 @if ($browser->isMobile())
-
+  @include('auth.login')
 @else
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
