@@ -36,7 +36,7 @@ class MobileController extends Controller
     }
 
     public function index(Request $request){
-        $Menu = Menu::paginate(12);
+        $Menu = Menu::paginate(30);
         // $Menu = DB::table('menus')->limit(12)->get();
         $Category = DB::table('category')->get();
         $Orders = DB::table('orders')->where('user_id', Auth::User()->id)->get();
