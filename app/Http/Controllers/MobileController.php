@@ -240,7 +240,10 @@ class MobileController extends Controller
 
         \Cart::remove($id);
 
-        return back();
+        $cartItems = \Cart::getContent();
+        // dd($cartItems);
+
+        return view('mobile.shopping-cart', compact('cartItems'));
     }
 
 
