@@ -11,9 +11,9 @@
 <!-- Mirrored from www.11-76.com/themes/sky/index-HTML5-video-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jul 2022 09:40:22 GMT -->
 <head>
         <meta charset="utf-8">
-        <meta name="title" content="Shaq's Choma Zone - Fries and Chiken Fast Food in Kiserian -Shaqs House">
-        <meta name="description" content="Indulge in irresistible flavors at Shaq's Choma Zone in Kiserian! Savor the perfect blend of crispy fries and succulent chicken at Shaq's House.">
-        <meta name="keywords" content="Shaq's Choma ZoneKiserian fast foodIrresistible flavorsCrispy friesSucculent chickenShaq's HouseFast food delightGo-to destinationFood indulgenceKiserian diningFlavorful experiencePerfect blendShaq's Choma Zone menuDelicious fries and chickenCulinary delight in KiserianShaq's Choma Zone experienceTasty fast food optionsShaq's Choma Zone KiserianGourmet fast foodSavory delights at Shaq's House">
+        <meta name="title" content="Shaq's Bites - Fries and Chiken Fast Food in Kiserian -Shaqs House">
+        <meta name="description" content="Indulge in irresistible flavors at Shaq's Bites in Kiserian! Savor the perfect blend of crispy fries and succulent chicken at Shaq's House.">
+        <meta name="keywords" content="Shaq's BitesKiserian fast foodIrresistible flavorsCrispy friesSucculent chickenShaq's HouseFast food delightGo-to destinationFood indulgenceKiserian diningFlavorful experiencePerfect blendShaq's Bites menuDelicious fries and chickenCulinary delight in KiserianShaq's Bites experienceTasty fast food optionsShaq's Bites KiserianGourmet fast foodSavory delights at Shaq's House">
         <meta name="robots" content="index, follow">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="language" content="English">
@@ -21,10 +21,10 @@
         <meta name="author" content="Designekta Studios">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
         {{--  --}}
-        <meta property="og:title" content=Shaq's Choma Zone - Fries and Chiken Fast Food in Kiserian -Shaqs House>
+        <meta property="og:title" content=Shaq's Bites - Fries and Chiken Fast Food in Kiserian -Shaqs House>
         <meta property="og:site_name" content=Shaqs Choma Zone>
         <meta property="og:url" content=http://shaqshouse.co.ke/>
-        <meta property="og:description" content=Indulge in irresistible flavors at Shaq's Choma Zone in Kiserian! Savor the perfect blend of crispy fries and succulent chicken at Shaq's House. Your go-to destination for fast food delight in Kiserian. Taste the extraordinary at Shaq's Choma Zone>
+        <meta property="og:description" content=Indulge in irresistible flavors at Shaq's Bites in Kiserian! Savor the perfect blend of crispy fries and succulent chicken at Shaq's House. Your go-to destination for fast food delight in Kiserian. Taste the extraordinary at Shaq's Bites>
         <meta property="og:type" content="">
         <meta property="og:image" content=https://shaqshouse.co.ke/soon/house.png>
         {{--  --}}
