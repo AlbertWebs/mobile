@@ -21,7 +21,7 @@
        <img src="{{asset('uploads/VENSHAQ001-41.png')}}" class="height-70" alt="logos" />
        </a>
        </span>
-       <img src="{{asset('mobileTheme/img/covertop.jpg')}}" class="img-fluid">
+       <img style="width:100%; object-fit:cover" src="{{asset('mobileTheme/img/covertop.jpg')}}" class="img-fluid">
     </section>
     <section class="bg-white body_rounded mt-n5 position-relative p-4">
        <h1>Welcome!</h1>
