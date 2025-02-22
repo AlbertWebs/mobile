@@ -14,7 +14,7 @@ Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
 Auth::routes();
 Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
 Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->name('home-index');
-Route::group(['prefix'=>'profile'], function(){
+Route::group(['prefix'=>'mobile'], function(){
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
     Route::post('/search-post', [App\Http\Controllers\MobileController::class, 'search_post'])->name('search_post');
     Route::get('/veryfy-number', [App\Http\Controllers\MobileController::class, 'veryfy_number'])->name('veryfy-number');
