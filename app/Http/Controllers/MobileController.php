@@ -705,7 +705,7 @@ class MobileController extends Controller
         $STKMpesaTransaction->CheckoutRequestID = $curl_content->CheckoutRequestID;
         $STKMpesaTransaction->MerchantRequestID = $MerchantRequestID;
         $STKMpesaTransaction->PhoneNumber = $phoneNumber;
-        $STKMpesaTransaction->orders = $phoneNumber;
+        $STKMpesaTransaction->orders = \Cart::getContent();
         $STKMpesaTransaction->Amount = $AmountSTK;
         $STKMpesaTransaction->checkout = \Cart::getContent();
         $STKMpesaTransaction->save();
