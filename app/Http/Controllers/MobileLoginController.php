@@ -93,7 +93,7 @@ class MobileLoginController extends Controller
                 $User = new User;
                 $User->name = $request->name;
                 $User->email = $request->email;
-                $User->location = $request->address;
+                $User->location = $request->location;
                 $User->mobile = $request->mobile;
                 $User->notes = " ";
                 $User->password = $password;
