@@ -50,7 +50,7 @@
           {{-- <a href="{{url('/')}}/mobile/veryfy-number" class="mt-4 btn btn-outline-primary py-3 box_rounded w-100">Sign in</a> --}}
           <p class="text-center mt-4"><a href="#" class="text-muted">OR</a></p>
           <p class="text-center mt-4">
-                <a style="background-color: #4267B2; color:#ffffff" href="{{url('/')}}/mobile/facebook" class="btn btn-outline-primary btn-sm px-3 rounded-3 mr-2 text-center"><span class="mdi mdi-facebook"></span>  Facebook Sign Up</a>
+                {{-- <a style="background-color: #4267B2; color:#ffffff" href="{{url('/')}}/mobile/facebook" class="btn btn-outline-primary btn-sm px-3 rounded-3 mr-2 text-center"><span class="mdi mdi-facebook"></span>  Facebook Sign Up</a> --}}
                 <a style="background-color: #DB4437; color:#ffffff" href="{{url('/')}}/mobile/google" class="btn btn-outline-primary btn-sm px-3 rounded-3 mr-2 text-center"><span class="mdi mdi-google"></span>  Google Sign Up</a>
           </p>
           {{-- <p class="text-center mt-4"><a href="forgot_password.html" class="text-muted">Forgot password?</a></p> --}}
