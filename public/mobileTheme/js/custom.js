@@ -234,7 +234,7 @@ Version: 1.0
                 // Handle the successful response
                 $(".loading-img").hide();
                 alert(response);
-                window.location.replace(host2);
+                // window.location.replace(host2);
 
 
               },
