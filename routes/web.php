@@ -17,7 +17,7 @@ Route::group(['prefix'=>'desktop'], function(){
     Route::get('/home', [App\Http\Controllers\DesktopController::class, 'index'])->name('home');
 });
 
-
+Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
 Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
 Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
 
@@ -26,9 +26,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->name('home');
 Route::group(['prefix'=>'mobile'], function(){
-    Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
+
     Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started');
-    Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started-params');
+    // Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started-params');
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
     Route::post('/search-post', [App\Http\Controllers\MobileController::class, 'search_post'])->name('search_post');
     Route::get('/veryfy-number', [App\Http\Controllers\MobileController::class, 'veryfy_number'])->name('veryfy-number');
