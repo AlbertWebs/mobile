@@ -28,6 +28,8 @@ Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->na
 Route::group(['prefix'=>'mobile'], function(){
     Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
     Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started');
+    Route::get('/menus/{id}', [App\Http\Controllers\MobileController::class, 'category'])->name('get-started-menus');
+
     // Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started-params');
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
     Route::post('/search-post', [App\Http\Controllers\MobileController::class, 'search_post'])->name('search_post');
