@@ -41,42 +41,7 @@
                 @endforeach
         </div>
         </section>
-        {{-- <section class="near py-3 pl-3 bg-light">
-        <div class="title mb-2 pb-1 d-flex align-items-center">
-            <h6 class="mb-0 fw-bold">Near you</h6>
-            <a href="near#html" class="ml-auto pr-3"><span class="text-primary">View All</span></a>
-        </div>
-        <div class="near_slider">
-            <a href="detail2#html">
-                <div class="near_item bg-white box_rounded mr-2 p-3 text-center my-1 shadow-sm">
-                    <img src="{{asset('mobileTheme/img/3.png')}}" class="img-fluid mx-auto mb-2 rounded-pill">
-                    <p class="mb-2 text-dark">Cake & Shakea</p>
-                    <span class="bg-light px-2 py-1 text-dark text-muted rounded-3">40 min</span>
-                </div>
-            </a>
-            <a href="detail2#html">
-                <div class="near_item bg-white box_rounded mr-2 p-3 text-center my-1 shadow-sm">
-                    <img src="{{asset('mobileTheme/img/1.png')}}" class="img-fluid mx-auto mb-2 rounded-pill">
-                    <p class="mb-2 text-dark">Oberoia Special</p>
-                    <span class="bg-light px-2 py-1 text-dark text-muted rounded-3">30 min</span>
-                </div>
-            </a>
-            <a href="detail2#html">
-                <div class="near_item bg-white box_rounded mr-2 p-3 text-center my-1 shadow-sm">
-                    <img src="{{asset('mobileTheme/img/5.png')}}" class="img-fluid mx-auto mb-2 rounded-pill">
-                    <p class="mb-2 text-dark">Pizzaa Places</p>
-                    <span class="bg-light px-2 py-1 text-dark text-muted rounded-3">20 min</span>
-                </div>
-            </a>
-            <a href="detail2#html">
-                <div class="near_item bg-white box_rounded mr-2 p-3 text-center my-1 shadow-sm">
-                    <img src="{{asset('mobileTheme/img/2.png')}}" class="img-fluid mx-auto mb-2 rounded-pill">
-                    <p class="mb-2 text-dark">Eat Well Dhabas</p>
-                    <span class="bg-light px-2 py-1 text-dark text-muted rounded-3">45 min</span>
-                </div>
-            </a>
-        </div>
-        </section> --}}
+
         <br><br>
         <div class="px-3">
         <div class="title mb-3 d-flex align-items-center">
