@@ -213,8 +213,8 @@ class MobileController extends Controller
 
     public function category($menu){
         $Category = DB::table('category')->where('id',$menu)->first();
-        $Products = DB::table('menus')->where('cat_id', $menu)->get();
-        return view('mobile.category', compact('Products','Category'));
+        $Menu = DB::table('menus')->where('cat_id', $menu)->get();
+        return view('mobile.category', compact('Menu','Category'));
     }
 
     public function menu_item($menu){
