@@ -29,7 +29,7 @@
         </div>
         <div class="featured_slider">
                 @foreach ($Category as $category)
-                <a href="{{url('/')}}/menus/{{$category->id}}">
+                <a href="{{url('/')}}/mobile/menus/{{$category->id}}">
                     <div class="featured_item mr-2">
                         <span class="position-absolute pb-2 pl-3">
                         <p class="text-white mb-1">{{$category->cat}}</p>
