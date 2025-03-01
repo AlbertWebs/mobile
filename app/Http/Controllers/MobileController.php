@@ -13,6 +13,7 @@ use App\Models\Menu;
 use App\Models\orders;
 use App\Models\Invoice;
 use App\Models\Product;
+use Pesapal;
 use App\Models\ReplyMessage;
 use App\Models\STKRequest;
 use App\Models\STKMpesaTransaction;
@@ -733,5 +734,62 @@ class MobileController extends Controller
         return response()->json([
             "message" => "Success"
         ]);
+    }
+
+    public function make_payments()
+    {
+        orders::createOrder();
+        $latest = orders::orderBy('date','DESC')->first();
+        $OrderID = $latest->id;
+        $OrderId = $OrderID+1;
+
+        $Count = \Cart::getContent()->count();
+        $Shipping = 0;
+        $Ship = ($Shipping);
+        $Tot = \Cart::getTotal();
+        $All = $Ship+$Tot;
+        $amount = $All;
+
+        $payments = new \App\Models\Payment;
+        $payments -> businessid = 1; //Business ID
+        $payments -> transactionid = Pesapal::random_reference();
+        $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
+        $payments -> amount = (int)$amount;
+        $payments -> currency = "KES";
+        $payments -> user_id = Auth::User()->id;
+        $payments -> order_id = $OrderId;
+        $payments -> save();
+
+        // Email Order
+        ReplyMessage::mailclient(Auth::User()->email,Auth::User()->name,$OrderId,$Ship,$All);
+        ReplyMessage::mailmerchant(Auth::User()->email,Auth::User()->name,Auth::User()->mobile);
+
+        $description = "Ordering $Count Products Online";
+        $u = Auth::User()->name;
+        $sms_u = "Hello $u, Your Order Was Posted Successfully, Our delivery agent will contact you shortly";
+        $sms_a = "New Order! You have received a new order, check your email for the order details";
+        $details = array(
+            'amount' => $payments -> amount,
+            'description' => $description,
+            'type' => 'MERCHANT',
+            'first_name' => Auth::User()->name,
+            'last_name' => Auth::User()->id,
+            'email' => Auth::User()->email,
+            'phonenumber' => Auth::User()->mobile,
+            'reference' => $payments -> transactionid,
+            'height'=>'400px',
+            'currency' => 'KES'
+        );
+        // dd($details);
+        $iframe=Pesapal::makePayment($details);
+        $cartItems = \Cart::getContent();
+
+        $Message = "";
+        $phone = "0723014032";
+        $this->send(Auth::User()->mobile,$sms_u);
+        $this->send($phone,$sms_a);
+
+        // return view('payments.business.pesapal', compact('iframe'));
+        return view('mobile.checkout-payment', compact('iframe','cartItems'));
     }
 }

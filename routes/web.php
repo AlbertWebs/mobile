@@ -18,6 +18,12 @@ Route::group(['prefix'=>'desktop'], function(){
 });
 
 
+Route::group(['prefix' => '/webhooks'], function () {
+    //PESAPAL
+    Route::get('donepayment', [App\Http\Controllers\PaymentsController::class, 'paymentsuccess'])->name('paymentsuccess');
+    Route::get('paymentconfirmation', [App\Http\Controllers\PaymentsController::class, 'paymentconfirmation']);
+});
+
 Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
 Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
 
@@ -29,6 +35,8 @@ Route::group(['prefix'=>'mobile'], function(){
     Route::get('/', [App\Http\Controllers\MobileController::class, 'index'])->name('index.mobile');
     Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started');
     Route::get('/menus/{id}', [App\Http\Controllers\MobileController::class, 'category'])->name('get-started-menus');
+
+    Route::get('/shopping-cart/checkout/make-payment', [App\Http\Controllers\MobileController::class, 'make_payments'])->name('make-paymens');
 
     // Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started-params');
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
