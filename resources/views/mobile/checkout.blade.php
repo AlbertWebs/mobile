@@ -60,7 +60,7 @@
     <section class="bg-white body_rounded mt-n5 position-relative p-4">
         <form method="POST" action="{{route('make-paymens-post')}}" id="stk-pushs">
            @csrf
-           @if(if(Auth::User()))
+           @if(Auth::User())
 
            @else
                 <div class="d-flex align-items-center mb-3">
