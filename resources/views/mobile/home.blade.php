@@ -2,6 +2,10 @@
     @extends('mobile.master-home')
 
     @section('content')
+    <?php
+        $Menu = \App\Models\Menu::paginate(30);
+        $Category = DB::table('category')->get();
+    ?>
     <div class="padding_bottom">
         <section class="bg-warning p-3">
         <div class="location_search">
