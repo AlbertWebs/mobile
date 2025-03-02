@@ -63,14 +63,14 @@
            <div class="d-flex align-items-center mb-3">
                 <span class="mdi mdi-account-check box_rounded p-2 btn btn-light mr-3 text-primary"></span>
                 <div class="form-floating border-bottom w-100">
-                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="name" value=""  placeholder="+254" required>
+                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="name" @if(Auth::User()) value="{{Auth::User()->name}}" @endif  placeholder="+254" required>
                 <label for="floatingInputValue" class="pl-0">Full Name</label>
                 </div>
             </div>
            <div class="d-flex align-items-center mb-3">
                 <span class="mdi mdi-email box_rounded p-2 btn btn-light mr-3 text-primary"></span>
                 <div class="form-floating border-bottom w-100">
-                <input type="email" class="form-control border-0 pl-0" id="floatingInputValue" name="email" value=""  placeholder="+254" required>
+                <input type="email" class="form-control border-0 pl-0" id="floatingInputValue" name="email" @if(Auth::User()) value="{{Auth::User()->email}}" @endif  placeholder="+254" required>
                 <label for="floatingInputValue" class="pl-0">Email</label>
                 </div>
             </div>
@@ -78,7 +78,7 @@
            <div class="d-flex align-items-center mb-3">
                 <span class="mdi mdi-phone box_rounded p-2 btn btn-light mr-3 text-primary"></span>
                 <div class="form-floating border-bottom w-100">
-                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="mobile" value=""  placeholder="+254" required>
+                <input type="text" class="form-control border-0 pl-0" id="floatingInputValue" name="mobile" @if(Auth::User()) value="{{Auth::User()->mobile}}" @endif  placeholder="+254" required>
                 <label for="floatingInputValue" class="pl-0">Mobile Number</label>
                 </div>
            </div>
