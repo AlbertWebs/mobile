@@ -31,21 +31,21 @@ class MobileController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function index(Request $request){
         $Menu = Menu::paginate(30);
         // $Menu = DB::table('menus')->limit(12)->get();
         $Category = DB::table('category')->get();
-        $Orders = DB::table('orders')->where('user_id', Auth::User()->id)->get();
+
         if ($request->ajax()) {
             $view = view('mobile.data', compact('Menu'))->render();
             return response()->json(['html' => $view]);
         }
-        return view('mobile.home', compact('Menu','Category','Orders'));
+        return view('mobile.home', compact('Menu','Category'));
     }
 
 
@@ -194,7 +194,7 @@ class MobileController extends Controller
         $cartItems = \Cart::getContent();
         // dd($cartItems);
 
-        return view('mobile.shopping-cart', compact('cartItems'));
+        return view('mobile.checkout', compact('cartItems'));
     }
 
     public function checkout(){
@@ -734,6 +734,78 @@ class MobileController extends Controller
         return response()->json([
             "message" => "Success"
         ]);
+    }
+
+    public function make_payments_post(Request $request)
+    {
+        $password_inSecured = $request->mobile;;
+        //harshing password Here
+        $password = Hash::make($password_inSecured);
+        $User = new User;
+        $User->name = $request->name;
+        $User->email = $request->email;
+        $User->location = "Default";
+        $User->mobile = $request->mobile;
+        $User->notes = " ";
+        $User->password = $password;
+        $User->save();
+
+        $user = User::where('email','=',$request->email)->first();
+        Auth::loginUsingId($user->id, TRUE);
+
+        orders::createOrder();
+        $latest = orders::orderBy('date','DESC')->first();
+        $OrderID = $latest->id;
+        $OrderId = $OrderID+1;
+
+        $Count = \Cart::getContent()->count();
+        $Shipping = 0;
+        $Ship = ($Shipping);
+        $Tot = \Cart::getTotal();
+        $All = $Ship+$Tot;
+        $amount = $All;
+
+        $payments = new \App\Models\Payment;
+        $payments -> businessid = 1; //Business ID
+        $payments -> transactionid = Pesapal::random_reference();
+        $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
+        $payments -> amount = (int)$amount;
+        $payments -> currency = "KES";
+        $payments -> user_id = Auth::User()->id;
+        $payments -> order_id = $OrderId;
+        $payments -> save();
+
+        // Email Order
+        ReplyMessage::mailclient(Auth::User()->email,Auth::User()->name,$OrderId,$Ship,$All);
+        ReplyMessage::mailmerchant(Auth::User()->email,Auth::User()->name,Auth::User()->mobile);
+
+        $description = "Ordering $Count Products Online";
+        $u = Auth::User()->name;
+        $sms_u = "Hello $u, Your Order Was Posted Successfully, Our delivery agent will contact you shortly";
+        $sms_a = "New Order! You have received a new order, check your email for the order details";
+        $details = array(
+            'amount' => $payments -> amount,
+            'description' => $description,
+            'type' => 'MERCHANT',
+            'first_name' => Auth::User()->name,
+            'last_name' => Auth::User()->id,
+            'email' => Auth::User()->email,
+            'phonenumber' => Auth::User()->mobile,
+            'reference' => $payments -> transactionid,
+            'height'=>'400px',
+            'currency' => 'KES'
+        );
+        // dd($details);
+        $iframe=Pesapal::makePayment($details);
+        $cartItems = \Cart::getContent();
+
+        $Message = "";
+        $phone = "0723014032";
+        $this->send(Auth::User()->mobile,$sms_u);
+        $this->send($phone,$sms_a);
+
+        // return view('payments.business.pesapal', compact('iframe'));
+        return view('mobile.checkout-payment', compact('iframe','cartItems'));
     }
 
     public function make_payments()

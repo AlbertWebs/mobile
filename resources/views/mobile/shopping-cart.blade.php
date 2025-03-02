@@ -20,8 +20,8 @@
     <section class="bg-white p-3">
        <a href="{{url('/')}}/mobile/profile" class="text-dark d-flex align-items-center mb-3">
           <div class="mb-3">
-             <p class="mb-1 text-danger">Delivered to</p>
-             <p class="mb-0 text-dark">{{Auth::User()->location}}</p>
+             {{-- <p class="mb-1 text-danger">Delivered to</p>
+             <p class="mb-0 text-dark">{{Auth::User()->location}}</p> --}}
              <p class="small text-muted mb-0"><strong>Pick Up Address:</strong> Kettle House Bar & Grill, Lavington, Muthangari Road, off Gitanga Rd, Nairobi </p>
           </div>
           <div class="ml-auto"><i class="mdi mdi-chevron-right bg-light p-2 text-muted box_rounded h4 mb-0"></i></div>

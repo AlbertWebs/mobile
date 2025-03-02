@@ -231,15 +231,20 @@ Version: 1.0
               url: host,
               method: "GET",
               success: function(response) {
-                // Handle the successful response
-                $("#myCart").load(" #myCart > *");
+                Swal.fire({
+                    title: "Added to Plate!",
+                     text: response,
+                     //type: "warning", -  doesn't exist
+                     showCancelButton: true,
+                     confirmButtonColor: '#4CAF50',
+                     confirmButtonText: "Procced to Checkout",
+                     //closeOnConfirm: false -  doesn't exist
+                 }).then(function (isConfirm) {
+                         if (isConfirm.isConfirmed) {
+                            window.location.replace(host2);
+                         }
+                 });
                 $(".loading-img").hide();
-                alert(response);
-                // $("#myCart").load(location.href + " #myCart");
-
-                // window.location.replace(host2);
-
-
               },
               error: function(xhr, status, error) {
                 // Handle the error

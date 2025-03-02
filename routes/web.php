@@ -27,7 +27,7 @@ Route::group(['prefix' => '/webhooks'], function () {
 Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
 Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
 
-Auth::routes();
+
 
 
 Route::get('/home', [App\Http\Controllers\MobileController::class, 'index'])->name('home');
@@ -37,6 +37,7 @@ Route::group(['prefix'=>'mobile'], function(){
     Route::get('/menus/{id}', [App\Http\Controllers\MobileController::class, 'category'])->name('get-started-menus');
 
     Route::get('/shopping-cart/checkout/make-payment', [App\Http\Controllers\MobileController::class, 'make_payments'])->name('make-paymens');
+    Route::post('/shopping-cart/checkout/make-payment', [App\Http\Controllers\MobileController::class, 'make_payments_post'])->name('make-paymens-post');
 
     // Route::get('/get-started', [App\Http\Controllers\MobileController::class, 'index'])->name('get-started-params');
     Route::get('/search', [App\Http\Controllers\MobileController::class, 'search'])->name('search');
@@ -83,7 +84,7 @@ Route::group(['prefix'=>'mobile'], function(){
     });
 });
 
-
+Auth::routes();
 Route::group(['prefix'=>'admin'], function(){
 
     Route::get('/', [AdminsController::class, 'index'])->name('admin.home');

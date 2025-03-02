@@ -31,18 +31,22 @@
             <a href="{{url('/')}}/mobile/search"><i class="mdi mdi-magnify mr-2"></i>Search</a>
 
         </li>
+        @if(Auth::check())
        <li>
           <a href="{{url('/')}}/mobile/profile"><i class="mdi mdi-account-circle-outline mr-2"></i>My Profile</a>
 
        </li>
+       @endif
        <li>
         <a href="https://api.whatsapp.com/send?text=Hello,%20Texting%20from%20Shaqs%20Bites%20App&phone=+254706788440"><i class="mdi mdi-comment mr-2"></i>Live Chat</a>
 
      </li>
+     @if(Auth::check())
        <li>
         <a href="{{url('/')}}/mobile/logout"><i class="mdi mdi-power mr-2"></i>Logout</a>
 
      </li>
+     @endif
 
     </ul>
     </li>
