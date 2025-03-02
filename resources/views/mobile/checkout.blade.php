@@ -85,6 +85,7 @@
 
 
            <input type="hidden" name="amount" value="{{\Cart::getTotal()}}">
+           <input type="hidden" name="password" value="68252624@MartinOnyuol">
 
 
            <div class="fixed-bottom p-3">

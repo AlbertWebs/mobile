@@ -23,6 +23,7 @@ use Response;
 use Session;
 use Darryldecode\Cart\Cart;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Rules;
 
 class MobileController extends Controller
 {
@@ -738,20 +739,28 @@ class MobileController extends Controller
 
     public function make_payments_post(Request $request)
     {
-        $password_inSecured = $request->mobile;;
-        //harshing password Here
-        $password = Hash::make($password_inSecured);
-        $User = new User;
-        $User->name = $request->name;
-        $User->email = $request->email;
-        $User->location = "Default";
-        $User->mobile = $request->mobile;
-        $User->notes = " ";
-        $User->password = $password;
-        $User->save();
+        // dd($request->all());
+        if(Auth::User()){
 
-        $user = User::where('email','=',$request->email)->first();
-        Auth::loginUsingId($user->id, TRUE);
+        }else{
+            $password_inSecured = $request->mobile;;
+            //harshing password Here
+            $password = Hash::make($password_inSecured);
+            $User = new User;
+            $User->name = $request->name;
+            $User->email = $request->email;
+            $User->location = "Default";
+            $User->mobile = $request->mobile;
+            $User->notes = " ";
+            $User->password = $password;
+            $User->save();
+
+            $user = User::where('email','=',$request->email)->first();
+            Auth::loginUsingId($user->id, TRUE);
+
+        }
+
+
 
         orders::createOrder();
         $latest = orders::orderBy('date','DESC')->first();
