@@ -1,10 +1,10 @@
-<footer class="bg-white body_rounded mt-n5 fixed-bottom osahan-footer-nav shadow">
+<footer class="bg-white body_rounded mt-n5 fixed-bottom osahan-footer-nav shadow ">
     @if(Auth::check())
 
     <div class="text-center">
         <img width="25" src="{{asset('/mobileTheme/img/loading.gif')}}" class="loading-img">
      </div>
-    <div class="row p-0 align-items-center">
+    <div class="row p-0 align-items-center border-thick-bottom">
        <div class="col text-center">
           <a href="{{url('/')}}/mobile/get-started" class="text-muted">
              <h1 class="mb-0"><span class="mdi mdi-home-outline"></span></h1>
@@ -28,10 +28,10 @@
        </div>
     </div>
     @else
-    <div class="text-center">
+    <div class="text-center ">
         <img width="25" src="{{asset('/mobileTheme/img/loading.gif')}}" class="loading-img">
      </div>
-    <div class="row p-0 align-items-center">
+    <div class="row p-0 align-items-center border-thick-bottom">
        <div class="col text-center">
           <a href="{{url('/')}}/mobile/get-started" class="text-muted">
              <h1 class="mb-0"><span class="mdi mdi-home-outline"></span></h1>

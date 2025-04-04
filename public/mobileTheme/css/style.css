@@ -530,3 +530,7 @@ body.index_bg {
     border-top: 5px solid #a11d29 !important;
     /* border-bottom: 5px solid #a11d29 !important; */
 }
+.border-thick-bottom{
+    border-bottom: 3px solid #a11d29 !important;
+    z-index:100000000;
+}

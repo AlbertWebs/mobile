@@ -6,7 +6,7 @@
 $Menu = \App\Models\Menu::paginate(30);
 $Category = DB::table("category")->get();
 ?>
-<div class="padding_bottom border-thick">
+<div class="padding_bottom ">
     <section class="bg-warnings p-3">
     <div class="location_search">
         <p class="text-dark mb-1 fw-bold">SHAQ'S BITES</p>

@@ -19,7 +19,7 @@
       <link href="{{asset('mobileTheme/vendor/sidebar/demo.css')}}" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
    </head>
-   <body class="bg-light">
+   <body class="bg-light border-thick">
       @yield('content')
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="{{asset('mobileTheme/vendor/jquery/jquery.min.js')}}" type="text/javascript"></script>
