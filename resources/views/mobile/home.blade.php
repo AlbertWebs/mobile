@@ -6,7 +6,7 @@
 $Menu = \App\Models\Menu::paginate(30);
 $Category = DB::table("category")->get();
 ?>
-<div class="padding_bottom">
+<div class="padding_bottom border-thick">
     <section class="bg-warnings p-3">
     <div class="location_search">
         <p class="text-dark mb-1 fw-bold">SHAQ'S BITES</p>
@@ -27,7 +27,7 @@ $Category = DB::table("category")->get();
         </a>
     </div>
     </section>
-    <div class="px-3 border-thick">
+    <div class="px-3 ">
         <section class="featured py-3 pl-3 bg-white body_rounded mt-n5">
             <div class="title mb-3">
                 <h6 class="mb-0 fw-bold">Featured</h6>
@@ -49,7 +49,7 @@ $Category = DB::table("category")->get();
     </div>
 
 
-    <div class="px-3 border-thick">
+    <div class="px-3 ">
     <div class="title mb-3 d-flex align-items-center">
         <h6 class="mb-0 fw-bold"><br>Menu</h6>
         <a href="tel:+254706788440" class="ml-auto"><span class="text-primarys theme-color"><span class="mdi mdi-phone"></span> Call Us</span></a>
