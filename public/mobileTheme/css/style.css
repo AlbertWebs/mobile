@@ -510,9 +510,16 @@ body.index_bg {
 .pull-right{
     float:right;
     border-radius:5px;
-    border:2px solid #f79338;
+    border:2px solid #a11d29;
 }
 
 .theme-color{
     color:#f79338;
+}
+.bg-warnings{
+    background-color:#a11d29 !important;
+    color:#ffffff;
+}
+.bg-warnings p{
+    color:#ffffff !important;
 }
