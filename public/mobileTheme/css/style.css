@@ -523,3 +523,10 @@ body.index_bg {
 .bg-warnings p{
     color:#ffffff !important;
 }
+
+.border-thick{
+    border-left: 5px solid #a11d29 !important;
+    border-right: 5px solid #a11d29 !important;
+    border-top: 5px solid #a11d29 !important;
+    /* border-bottom: 5px solid #a11d29 !important; */
+}
