@@ -69,6 +69,22 @@
             text-decoration: underline;
         }
     </style>
+
+<title>Fast Food Restaurant in Lavington | Shaq's Bites</title>
+
+<meta name="description" content="Grab delicious fast food at Shaq's Bites in Lavington. Burgers, fries, wings, and more! Call 0706788440 for quick orders and deliveries.">
+
+<meta name="keywords" content="fast food Lavington, Shaq's Bites restaurant, burgers and fries Nairobi, best fast food Lavington, quick meals Nairobi, Shaq's House, food delivery Lavington">
+
+<meta property="og:title" content="Fast Food Restaurant in Lavington | Shaq's Bites">
+<meta property="og:description" content="Shaq's Bites offers tasty burgers, fries, wings, and more in Lavington. Fast service, fresh meals. Call 0706788440 to order!">
+<meta property="og:image" content="https://shaqshouse.co.ke/uploads/VENSHAQ001-41.png">
+<meta property="og:url" content="https://shaqshouse.co.ke/house-menu">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Shaq's Bites">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="sw_KE">
+<meta property="og:locale:alternate" content="fr_FR">
 </head>
 
 <body>

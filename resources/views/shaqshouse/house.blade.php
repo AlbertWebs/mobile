@@ -69,6 +69,18 @@
             text-decoration: underline;
         }
     </style>
+    <title>Authentic Swahili Dishes in Lavington | Shaq's House</title>
+
+    <meta name="description" content="Enjoy delicious, authentic Swahili dishes at Shaq's House in Lavington. Call 0706788440 to order your favorite meals or visit us today!">
+
+    <meta name="keywords" content="Swahili dishes Lavington, Swahili food Nairobi, Shaq's House restaurant, Lavington restaurants, Kenyan cuisine, Swahili meals delivery, best Swahili dishes">
+
+    <meta property="og:title" content="Authentic Swahili Dishes in Lavington | Shaq's House">
+    <meta property="og:description" content="Enjoy the best of Swahili cuisine at Shaq's House, Lavington. Taste the tradition!">
+    <meta property="og:image" content="https://shaqshouse.co.ke/uploads/VENSHAQ001-41.png">
+    <meta property="og:url" content="https://shaqshouse.co.ke/house-menu">
+    <meta property="og:type" content="website">
+
 </head>
 
 <body>
