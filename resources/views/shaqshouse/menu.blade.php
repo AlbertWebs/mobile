@@ -104,7 +104,7 @@
     <div class="footer">Powered by <a href="https://designekta.com">Designekta Studios</a></div>
 
     <script>
-        const url = "{{url('/')}}/uploads/shaqs-bites.pdf";
+        const url = "{{url('/')}}/uploads/DNR-SHAQS-BITES-UPDATED-MENU-3.pdf";
         let pdfDoc = null;
         const scale = 1.5; // Adjust this scale for better readability
         const container = document.getElementById("pdfContainer");
@@ -142,7 +142,7 @@
         function downloadPDF() {
             const link = document.createElement("a");
             link.href = url;
-            link.download = "{{url('/')}}/uploads/shaqs-bites.pdf";
+            link.download = "{{url('/')}}/uploads/DNR-SHAQS-BITES-UPDATED-MENU-3.pdf";
             link.click();
         }
     </script>
