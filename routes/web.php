@@ -12,6 +12,9 @@ Route::get('/', function () {
 Route::get('/menu', function () {
     return view('shaqshouse.menu');
 });
+Route::get('/house-menu', function () {
+    return view('shaqshouse.house');
+});
 // tep
 Route::group(['prefix'=>'desktop'], function(){
     Route::get('/home', [App\Http\Controllers\DesktopController::class, 'index'])->name('home');
