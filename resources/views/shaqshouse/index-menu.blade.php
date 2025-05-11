@@ -1,4 +1,3 @@
-
 <html style="background: #0c0d0c">
 
 <head>
@@ -20,11 +19,16 @@
         #pdfContainer {
             flex-grow: 1;
             width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-x: auto;
         }
 
         .pdfPage {
             display: block;
             margin: 20px auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .download-button {
@@ -55,8 +59,6 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
 
@@ -67,6 +69,15 @@
 
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .download-button {
+                top: 15px;
+                right: 15px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
         }
     </style>
 
@@ -106,13 +117,11 @@
     <script>
         const url = "{{url('/')}}/uploads/DNR-SHAQS-BITES-UPDATED-MENU-3.pdf";
         let pdfDoc = null;
-        const scale = 1.5; // Adjust this scale for better readability
         const container = document.getElementById("pdfContainer");
+        const scale = window.innerWidth < 768 ? 1 : 1.5;
 
         function renderPage(page) {
-            const viewport = page.getViewport({
-                scale: scale
-            });
+            const viewport = page.getViewport({ scale: scale });
             const canvas = document.createElement("canvas");
             const context = canvas.getContext("2d");
             canvas.height = viewport.height;
@@ -128,8 +137,7 @@
             page.render(renderContext);
         }
 
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
 
         pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
             pdfDoc = pdfDoc_;
@@ -142,10 +150,10 @@
         function downloadPDF() {
             const link = document.createElement("a");
             link.href = url;
-            link.download = "{{url('/')}}/uploads/DNR-SHAQS-BITES-UPDATED-MENU-3.pdf";
+            link.download = "DNR-SHAQS-BITES-UPDATED-MENU-3.pdf";
             link.click();
         }
     </script>
 </body>
 
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl505670'},{'dcenter':'p3'},{'cp_id':'10027206'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+</html>
